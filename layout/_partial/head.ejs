@@ -37,7 +37,12 @@
     <meta property="og:image" content="<%= config.cover %>"/>
   <% } %>
 
-  <link href="<%- config.root %>favicon.png" rel="icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%- config.root %>favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="<%- config.root %>favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="<%- config.root %>favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="<%- config.root %>favicons/manifest.json">
+  <link rel="mask-icon" href="<%- config.root %>favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
   <link rel="alternate" href="<% if (theme.rss){ %><%- theme.rss %><% } else { %><%- config.root %>atom.xml<% } %>" title="<%= config.title %>" type="application/atom+xml">
   <link rel="stylesheet" href="<%- config.root %>css/style.css" media="screen" type="text/css">
   <%- partial('google_analytics') %>
